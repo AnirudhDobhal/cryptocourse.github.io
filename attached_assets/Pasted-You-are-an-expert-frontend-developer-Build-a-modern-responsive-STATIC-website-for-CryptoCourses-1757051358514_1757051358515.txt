@@ -1,0 +1,111 @@
+You are an expert frontend developer. Build a modern, responsive, STATIC website for **CryptoCourses.in** to raise awareness about cryptocurrency. 
+
+### Tech & Constraints
+- Tech stack: **HTML5 + CSS3 only** (no frameworks, no build tools). 
+- Deliver clean, semantic markup and a single well-organized CSS file using CSS variables and utility classes where helpful.
+- Must be fast, accessible (WCAG AA), and mobile-first responsive.
+
+### Visual Style
+- Modern, trustworthy, educational vibe.
+- Color palette: 
+  -- Primary: #5B8DEF (educational blue), 
+  -- Accent: #14C38E (trust/verification green), 
+  -- Dark: #0B1021, 
+  -- Light: #F5F7FB.
+- Typography: system stack with clear hierarchy; larger headings; comfortable line-height.
+- Soft cards, subtle shadows, plenty of white space; rounded-2xl corners.
+- Support **dark mode** with `@media (prefers-color-scheme: dark)`.
+
+### Site Map & Files
+Create this file structure:
+/
+  index.html
+  about.html
+  blog.html
+  blog/
+    what-is-crypto.html
+    crypto-safety-myths.html
+    blockchain-basics.html
+  resources.html
+  faq.html
+  contact.html
+  privacy.html
+  terms.html
+  /assets/
+    /img/ (placeholders + SVG icons)
+    /video/ (placeholder.mp4 or YouTube embed poster)
+  /css/
+    styles.css
+  /js/
+    (empty; do not use unless strictly necessary for video fallback)
+
+### Global Requirements
+- Reusable header with logo “CryptoCourses.in”, nav (Home, Blogs, Resources, About, FAQ, Contact), and a prominent **CTA: “Start Learning”** linking to Resources.
+- Reusable footer with quick links, social icons (SVG), newsletter signup (mailto or comment a Formspree placeholder), and legal (Privacy, Terms).
+- SEO: unique `<title>`, meta description, Open Graph/Twitter meta, canonical link.
+- Schema.org JSON-LD:
+  - `Organization` on all pages.
+  - `BreadcrumbList` where relevant.
+  - `Article` on blog posts.
+- Accessibility: semantic landmarks (`header`, `nav`, `main`, `footer`), alt text, focus states, ARIA labels, sufficient color contrast.
+
+### Home (index.html)
+Sections (each in its own `<section>` with an id):
+1. **Hero**: punchy headline (“Understand Crypto the Right Way”), subhead, CTA buttons (“Watch Intro Video”, “Start Learning”).
+2. **Explainer Video**: embed a poster + `<video>` source (mp4) and fallback YouTube iframe. Short caption describing what viewers will learn.
+3. **What is Crypto & Why It’s Safe**: clear, jargon-free explanation; cover cryptography, decentralization, public blockchains, and security best practices. Include a “Myths vs Facts” 3-card row.
+4. **Learning Path**: 3–4 cards (Beginner, Intermediate, Advanced, Safety & Compliance); each with outcomes and estimated time.
+5. **Featured Blogs**: 3 latest posts with image, excerpt, tag chips, “Read more”.
+6. **Safety & Responsible Use**: bullet list on wallet security, scams, volatility; add a clear **not financial advice** disclaimer.
+7. **Testimonials**: 3 short quotes (placeholders) to establish trust.
+8. **Callout**: newsletter signup (mailto) and CTA to Resources.
+
+### Blogs
+- **blog.html**: grid of posts with filters by tag (no JS; use anchor links and CSS-only tabs or simply present categories).
+- Each post (in /blog/*.html) must include:
+  - Hero title, author, date (ISO format), estimated read time.
+  - Table of contents (in-page anchors).
+  - Clear subheadings, code blocks where useful, diagrams via simple SVGs.
+  - Key takeaways list at the end.
+  - `Article` JSON-LD.
+
+Create these sample posts with original explanatory content (no copying):
+- what-is-crypto.html
+- crypto-safety-myths.html
+- blockchain-basics.html
+
+### Resources (resources.html)
+- Curated sections: “Start Here”, “Wallets & Security”, “Block Explorers”, “Learning Hubs”, “Regulatory & Tax Basics (Country-agnostic)”.
+- For each item, provide a short neutral description and a placeholder link (`#`) with rel attributes set for safety; remind users links are examples.
+
+### About (about.html)
+- Mission, who we help, editorial guidelines (impartial, educational, risk disclosures).
+- Small team section with placeholder avatars.
+
+### FAQ (faq.html)
+- 12–15 Q&As focusing on fundamentals, safety, volatility, wallets, scams, fees, and how blockchains work. Keep answers concise and non-advisory.
+
+### Contact (contact.html)
+- Simple contact form (Name, Email, Topic, Message). Use `mailto:` action or comment a Formspree placeholder. Include address placeholder and social links.
+
+### Legal (privacy.html, terms.html)
+- Plain-English templates suitable for an educational site, no data sales, cookie note (static site), and strong “not financial advice” clause.
+
+### “Check other crypto websites” instruction
+- Synthesize common UX patterns seen on leading crypto education sites (hero + explainer video, myth-busting, learning paths, glossaries, safety callouts, FAQs), but **do not copy** any text. Keep tone neutral and educational.
+
+### Performance
+- Optimize images (use SVG where possible), add `loading="lazy"` to images/iframes, minify CSS (but keep a readable source version), preconnect for YouTube if used.
+- Use responsive images and proper `<meta name="viewport">`.
+
+### Extras
+- Add a small **Glossary** component in Resources (accordion or simple list, CSS-only).
+- Include a “Report an issue” mailto link in the footer.
+- Favicon and app icons placeholders.
+
+### Delivery
+- Provide all HTML files and `css/styles.css` fully implemented with sample content and placeholders where links aren’t final.
+- Code should be clean, commented, and easy to extend. 
+- After generating, include a short README section as an HTML comment in index.html describing how to add new blog posts and adjust colors/branding.
+
+Build now.
